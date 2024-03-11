@@ -1,4 +1,4 @@
-import UserCard from '@/components/ui/UserCard';
+import UserCard from '@/components/UserCard';
 import Link from 'next/link';
 import { Suspense } from 'react';
 

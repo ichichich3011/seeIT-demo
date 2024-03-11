@@ -1,17 +1,10 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { getUserData } from '@/lib/utils';
 
 const UserCard = async ({userName}: { userName: string }) => {
     try {
-        const user = await fetch(`https://api.github.com/users/${userName}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'Authorization': `Bearer ${process.env.GITHUB_API_TOKEN}`,
-            },
-
-        }).then(res => res.json());
+        const user = await getUserData(userName)
         return (
             <Card>
                 <CardHeader className={'flex flex-row gap-4'}>
