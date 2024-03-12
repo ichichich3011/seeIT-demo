@@ -1,10 +1,11 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { getUserData } from '@/lib/utils';
+import { GitHubUser } from '@/types/types';
 
 const UserCard = async ({userName}: { userName: string }) => {
     try {
-        const user = await getUserData(userName)
+        const user = await getUserData(userName) as GitHubUser
         return (
             <Card>
                 <CardHeader className={'flex flex-row gap-4'}>

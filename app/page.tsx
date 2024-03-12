@@ -1,6 +1,7 @@
 import UserCard from '@/components/UserCard';
 import Link from 'next/link';
 import { Suspense } from 'react';
+import UserCardSkeleton from '@/components/loading/UserCardSkeleton';
 
 export default async function Home() {
     const userNames = [ 'abhisheksharma', 'ichichich3011', 'intigabriel', 'leerob', 'prometheus', 'vercel' ];
@@ -11,7 +12,7 @@ export default async function Home() {
                 {userNames.map((userName: string, index: number) =>
                     <Suspense
                         key={`${userName}-${index}`}
-                        fallback={<div>Loading...</div>}
+                        fallback={<UserCardSkeleton />}
                     >
                         <Link
                             className={' min-w-52 w-full h-full col-span-1'}
