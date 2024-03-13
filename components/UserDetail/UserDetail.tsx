@@ -6,7 +6,6 @@ import { GitHubUser } from '@/types/types';
 const UserDetail = async ({userName}: any) => {
 
     const user = await getUserData(userName) as GitHubUser
-    console.log(user)
 
     return (
         <div className={'py-4 px-8'}>
