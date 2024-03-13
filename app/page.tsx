@@ -12,11 +12,12 @@ export default async function Home() {
                 {userNames.map((userName: string, index: number) =>
                     <Suspense
                         key={`${userName}-${index}`}
-                        fallback={<UserCardSkeleton />}
+                        fallback={<UserCardSkeleton/>}
                     >
                         <Link
-                            className={' min-w-52 w-full h-full col-span-1'}
-                            href={`/${userName}`}>
+                            className={'min-w-52 w-full h-full col-span-1'}
+                            href={`/${userName}`}
+                        >
                             <UserCard userName={userName}/>
                         </Link>
                     </Suspense>
