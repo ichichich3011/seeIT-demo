@@ -15,7 +15,7 @@ const sleep = (number: number) => {
 export async function getUserData(userName: string): Promise<GitHubUser>{
 
   // add artificial delay to show data streaming
-  await sleep(Math.random() * 2 * 1000);
+  await sleep(Math.random() * 4 * 1000);
 
 
   return await fetch(`https://api.github.com/users/${userName}`, {

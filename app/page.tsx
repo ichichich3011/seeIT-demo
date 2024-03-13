@@ -4,9 +4,17 @@ import { Suspense } from 'react';
 import UserCardSkeleton from '@/components/loading/UserCardSkeleton';
 
 export default async function Home() {
-    const userNames = [ 'abhisheksharma', 'ichichich3011', 'intigabriel', 'leerob', 'prometheus', 'vercel' ];
+    const userNames = [
+        'aalibaabaa',
+        'intigabriel',
+        'vuhrmeister',
+        'laeckerv',
+        'ichichich3011',
+        'leerob',
+        'vercel'
+    ];
     return (
-        <main className="max-w-screen-2xl min-h-screen ">
+        <main className="max-w-screen-2xl mx-auto min-h-screen ">
             <div
                 className={'grid lg:grid-cols-4 md:grid-cols-2 grid-flow-row grid-cols-1 auto-rows-fr flex-row gap-16 px-8'}>
                 {userNames.map((userName: string, index: number) =>
